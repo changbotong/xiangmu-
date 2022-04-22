@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <span>vs</span>
+    <input type="text">
+    <span>比较大的数据是>>></span>
+    <span>=</span>
+    <span class="s">?</span>
+    <button>点击</button>
+</body>
+</html>
+<script>
+    var inp =document.querySelectorAll("input")
+    var s = document.querySelector(".s")
+    var btn = document.querySelector("button")
+    btn.onclick=function(){
+        var x = inp[0].value
+        var y = inp[1].value
+        if(parseInt(x) >= parseInt(y)){
+            s.innerHTML= parseInt(x)
+        }else{
+            s.innerHTML= parseInt(y)
+        }
+    }
+</script>
+<style>
+    .s{
+        color: #c00;
+    }
+    input{
+        width: 30px;
+    }
+</style>
