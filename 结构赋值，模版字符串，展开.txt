@@ -1,0 +1,33 @@
+1.结构赋值：
+（1）作用：提取数据；
+  (2)   特点：保证=号左右两边结构一致，一般是对象或数组
+（3）例子：let arr =["1","[2,9,0]","3"];   
+                  let [one,[t,w,o],three] = arr
+                  one=1,t=2,w=9,o=0,three=3(数组)
+                   let obj={
+                                    code:200,
+                                    data:[  {id:1,name:jicko}，{id:2,name:jicko}，{id:3,name:jicko}，
+                                             ],
+                                     msg:登录成功
+                                 }
+                    （解构赋值） let {data:date} = obj;（改名）相当于date获取了obj.data的值
+2.模版字符串
+（1）js定义字符串 ("" ,' ')这两个是普通的，（``）反引号 特点： 解析变量，保留原格式
+        var obj={uname:"jock",age:20}
+         var str = `我的名字是${obj.uname}我的年龄是${obj.age}`
+3set和map
+       set ： 本质上是不重复的无序数据集合，类似数组
+             定义 ：let s1=new Set() 是一个对象 ; 
+             添加 ：s1.add(添加的数据);   删除 :   s1.delete(删除的数据);  遍历 forEach ； 删除所有 clear();长度 size获取数量; has判断是否有某个值
+              应用场景:1,可以用于数组去重,new Set(数组)返回的不是数组，要用... {...数组}
+       map：是一个构造函数（数组中的map是一个类型）map数据结构主要为了解决对象的key（key是=左侧,value是=的右侧）只能是字符串类型，有了map可以为任何类型
+                定义 : let s2 = new Map()
+                添加 : s2.set("变量"，"值");获取值 s2.get（）长度 size获取数量; 改变类型 let ul = Number  s2.set(ul,"值")
+3展开操作和rest符 : (...)
+                            作用:1.展开...  展开对象也能展开数组
+                                                  数组 let arr=[1,2,3,4,5];let arr2=["q","w","e"] // let arr =  [...arr,...arr2]合并数组
+                                                  对象 let obj={uname:jock,age:20}   let obj2={uname:alice,age:15}     合并对象（for(a in b)）循环对象 let obj={...obj,...obj2}
+                                     2.rest... (剩余操作) 主要针对于函数 （用于函数的形参）function  arr (...arr3){
+                                                                                                                                              console.log(arr3) //arr3 =[1,2,3,4,5,6,7,8,9] 
+                                                                                                                                       }   
+                                                                                                           arr(1,2,3,4,5,6,7,8,9)
