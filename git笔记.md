@@ -28,6 +28,8 @@ git push origin dev :dev  把本地分支推送到远程仓库
 
 git log 查看日志
 
+git reflog 日志
+
 git pull 拉取
 
  remote add 远程添加
@@ -55,6 +57,7 @@ git tag (显示v1.0)
 git push --tags  吧搜有的标签推送到远程仓库
 
 git remote -v   
+1234567854321234567
 
 
 
